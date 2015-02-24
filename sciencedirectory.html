@@ -10,6 +10,87 @@ width: 100%;
 
       border: 1px solid black;
     }
+    
+    @import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+
+h1,p {
+	text-align:center;
+	font-family: 'Bree Serif', 'serif';
+	}
+
+h1 {
+	font-size:60px;
+}
+
+p {
+  font-size:20px;
+}
+
+nav { margin:100px auto; width:800px; }
+
+nav ul {
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+	display:block;
+	}
+	
+nav ul li {
+	float:left;
+	display:list-item;
+	list-style: none; 
+	
+	background-color:#64abfb;
+	border-bottom: 5px solid #2ecc71;
+	}
+
+nav ul li a {
+	display:block;
+	padding:15px 10px;	
+	
+	color:#FFF;
+	font-size:20px;
+	text-decoration:none;
+	font-family: 'Bree Serif', 'serif';
+}
+
+li a:hover { background-color: #2ecc71; }
+
+	
+/* Change this in order to change the Dropdown symbol */
+li > a:after { content: ' »'; } 
+li > a:only-child:after { content: ''; }  	
+	
+	
+/* The Dropdown Styles */
+/* =================== */
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute; top: 58px;
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:list-item;
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	position: relative;
+	border-bottom:none;
+}
+
+/* Second, Third and more Tiers	*/
+nav ul ul ul li {
+	position: absolute relative;
+	top:-58px; 
+	left:170px;
+}
   </style>
 </head>
 <body>
@@ -22,5 +103,44 @@ width: 100%;
     <td><center>Botany</center></td>
   </tr>
 </table>
+
+<h1>Pure CSS Drop Down Menu</h1>
+<p>Dropdowns are marked with " » "<br/>
+Tutorial - <a href="http://andornagy.com/css-dropdown-menu/">CSS Drop Down Menu</a></p>
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">WordPress</a>
+        <!-- First Tier Drop Down -->
+        <ul>
+            <li><a href="#">Themes</a></li>
+            <li><a href="#">Plugins</a></li>
+            <li><a href="#">Tutorials</a></li>
+        </ul>        
+        </li>
+        <li><a href="#">Web Design</a>
+        <!-- First Tier Drop Down -->
+        <ul>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Links</a></li>
+            <li><a href="#">Tutorials</a>
+        	<!-- Second Tier Drop Down -->
+            <ul>
+                <li><a href="#">HTML/CSS</a></li>
+                <li><a href="#">jQuery</a></li>
+                <li><a href="#">Other</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href="#">Graphic Design</a></li>
+        <li><a href="#">Inspiration</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</nav>
+  
 </body>
+
+
 </html>
